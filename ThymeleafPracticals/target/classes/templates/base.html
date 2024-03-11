@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org" th:fragment="layout(content)">
+<head>
+	<meta charset="UTF-8" />
+	<title>Inheritence</title>
+	<link rel="stylesheet" th:href="@{/style.css}" />
+</head>
+<body>
+	
+	<h1>This Is Common Header</h1>
+	
+	<h1 th:replace="${content}"></h1>
+	
+	<h1 th:replace="footer::footer1(${title},${subtitle})"></h1>
+	
+	
+</body>
+</html>

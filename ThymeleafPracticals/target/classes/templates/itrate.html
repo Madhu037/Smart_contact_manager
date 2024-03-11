@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>Looping</title>
+</head>
+<body>
+	<h1>LOOPING</h1>
+	<h1 th:text="${names}"></h1>
+	<ul>
+		<li th:each=" n : ${names}">
+		<span th:text="${n}"></span>
+		</li>
+	</ul>
+	
+	<ul>
+		<li th:each=" m,status : ${names}">
+		<span th:text="${status.index}+' '+${m}"></span>
+		</li>
+	
+	</ul>
+	
+	
+	
+</body>
+</html>
